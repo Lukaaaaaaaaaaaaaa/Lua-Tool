@@ -14,7 +14,7 @@ from util.plugins.commun import *
 def search_for_updates():
     clear()
     setTitle("{c}UCITAVA SE... ")
-    r = requests.get("https://github.com/BokiSenss/Inspect_multi_tool/releases/Newwssss")
+    r = requests.get("https://github.com/Lukaaaaaaaaaaaaaa/Lua-Tool/tree/main/LuaTool")
 
     soup = str(BeautifulSoup(r.text, 'html.parser'))
     s1 = re.search('<title>', soup)
@@ -25,37 +25,37 @@ def search_for_updates():
         setTitle("")
         print(f'''                    \n'''.replace('█', f'{m}█{y}'))
         discserver()
-        soup = BeautifulSoup(requests.get("https://github.com/BokiSenss/Inspect_multi_tool/releases").text, 'html.parser')
+        soup = BeautifulSoup(requests.get("https://github.com/Lukaaaaaaaaaaaaaa/Lua-Tool/tree/main/LuaTool").text, 'html.parser')
         for link in soup.find_all('a'):
             if "releases/download" in str(link):
                 update_url = f"https://github.com/{link.get('href')}"
-        choice = input(f'\n{y}[--->{y}]{c}discord.gg/inspectteam\n{y}[--->{y}]{c}discord.gg/inspectservices\n{y}[--->{y}]{c}JOIN US DISCORD SERVER\n\n{y}[--->{y}]{m} AKO ZELITE NASTAVITI PRITISNITE ENTER!')
+        choice = input(f'\n{y}[--->{y}]{c}discord.gg/bvcbgq6V\n{y}[--->{y}]{c}discord.gg/qhsDZMNb\n{y}[--->{y}]{c}JOIN US DISCORD SERVER\n\n{y}[--->{y}]{m} AKO ZELITE NASTAVITI PRITISNITE ENTER!')
 
         if choice.lower() == 'y' or choice.lower() == 'yes':
             print(f"\n{y}[--->{y}]{m} UCITAVANJE...")
             setTitle(f'UCITAVANJE...')
 
             if os.path.basename(sys.argv[0]).endswith("exe"):
-                with open("INSPECT_MULTI_TOOL.zip", 'wb')as zipfile:
+                with open("MULTI_TOOL.zip", 'wb')as zipfile:
                     zipfile.write(requests.get(update_url).content)
-                with ZipFile("INSPECT_MULTI_TOOL.zip", 'r') as filezip:
+                with ZipFile("MULTI_TOOL.zip", 'r') as filezip:
                     filezip.extractall()
-                os.remove("INSPECT_MULTI_TOOL.zip")
-                cwd = os.getcwd()+'\\INSPECT_MULTI_TOOL\\'
+                os.remove("MULTI_TOOL.zip")
+                cwd = os.getcwd()+'\\MULTI_TOOL\\'
                 shutil.copyfile(cwd+'Changelog.md', 'Changelog.md')
                 try:
                     shutil.copyfile(cwd+os.path.basename(sys.argv[0]), '@TIO.exe')
                 except Exception:
                     pass
                 shutil.copyfile(cwd+'README.md', 'README.md')                   
-                shutil.rmtree('INSPECT_MULTI_TOOL')
-                setTitle('INSPECT_MULTI_TOOL Update Complete!')
+                shutil.rmtree('MULTI_TOOL')
+                setTitle('MULTI_TOOL Update Complete!')
                 input(f"\n{y}[!{y}]{m} ZAVRSENO !", end="")
                 os.startfile("@TIO.exe")
                 os._exit(0)
 
             else:
-                new_version_source = requests.get("https://github.com/BokiSenss/Inspect_multi_tool/releases/download/Newwssss/INSPECT_MULTI_TOOL.zip")
+                new_version_source = requests.get("https://github.com/Lukaaaaaaaaaaaaaa/Lua-Tool/tree/main/LuaTool")
                 with open("Discord-All-Tools-In-One-main.zip", 'wb')as zipfile:
                     zipfile.write(new_version_source.content)
                 with ZipFile("Discord-All-Tools-In-One-main.zip", 'r') as filezip:
